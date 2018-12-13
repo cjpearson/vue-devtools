@@ -24,7 +24,9 @@ export default new Vuex.Store({
   mutations: {
     TEST_INIT: state => state.inited++,
     INCREMENT: state => state.count++,
+    INCREMENT_BY: (state, payload) => { state.count += payload },
     DECREMENT: state => state.count--,
+    DECREMENT_BY: (state, payload) => { state.count -= payload },
     UPDATE_DATE: state => {
       state.date = new Date()
     },

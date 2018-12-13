@@ -1,8 +1,10 @@
 <template>
   <div id="counter">
     <p>{{ count }}</p>
+    <button class="increment2" @click="incrementBy2">+2</button>
     <button class="increment" @click="increment">+1</button>
     <button class="decrement" @click="decrement">-1</button>
+    <button class="decrement2" @click="decrementBy2">-2</button>
 
     <br>
 
@@ -39,6 +41,12 @@ export default {
     },
     decrement () {
       this.$store.commit('DECREMENT', 2)
+    },
+    incrementBy2 () {
+      this.$store.commit('INCREMENT_BY', 2)
+    },
+    decrementBy2 () {
+      this.$store.commit('DECREMENT_BY', 2)
     },
     doLotMutations () {
       for (let i = 0; i < 10000; i++) {
